@@ -17,7 +17,7 @@ export default function Home() {
             className="hidden md:block  h-screen w-full object-cover"
           />
           <img
-            src="banner.jpg"
+            src="banner1.jpg"
             alt="banner"
             className="block md:hidden h-screen w-full object-cover"
           />
