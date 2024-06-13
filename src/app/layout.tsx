@@ -18,10 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("relative", inter.className)}>
-        <Navbar />
-        {children}
-      </body>
+      <body className={cn("relative", inter.className)}>{children}</body>
     </html>
   );
 }
