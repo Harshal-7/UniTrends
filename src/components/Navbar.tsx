@@ -26,12 +26,18 @@ const sidebarVariants = {
   closed: { x: "-100%" },
 };
 
-const Navbar = ({ className }: { className?: string }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = ({
+  className,
+  categoryLayoutSpanClass,
+}: {
+  className?: string;
+  categoryLayoutSpanClass?: string;
+}) => {
   const scrollPosition = useScroll();
-
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // for sidebar menu overflow (can not scroll if menu is open)
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -49,6 +55,9 @@ const Navbar = ({ className }: { className?: string }) => {
       ? "shadow transition-all duration-300 bg-background"
       : "text-white transition-all duration-300";
 
+  const sidebarNavTextUnderline =
+    scrollPosition > 0 ? "bg-[#ffffff]" : "bg-[#000000]";
+
   const isScrolledBackground =
     scrollPosition > 0 ? "bg-[#000000] text-white" : "bg-[#ffffff] text-black";
 
@@ -64,14 +73,17 @@ const Navbar = ({ className }: { className?: string }) => {
         className
       )}
     >
-      <li className="block md:hidden pt-2">
+      {/* hamburger button */}
+      <li className="flex gap-4 md:hidden">
         <button onClick={toggleMenu} className="">
           {isMenuOpen ? (
-            <X className="w-5 h-5 md:w-6 md:h-6 self-center transition-all duration-300" />
+            <X className="w-5 h-5 md:w-6 md:h-6 self-center transition-all duration-300 hover:scale-110" />
           ) : (
-            <Menu className="w-5 h-5 md:w-6 md:h-6 self-center transition-all duration-300" />
+            <Menu className="w-5 h-5 md:w-6 md:h-6 self-center transition-all duration-300 hover:scale-110" />
           )}
         </button>
+        <User className="w-5 h-5 md:w-6 md:h-6 opacity-0" />
+        <User className="w-5 h-5 md:w-6 md:h-6 opacity-0 hidden sm:block" />
       </li>
 
       {/* LOGO  */}
@@ -98,7 +110,8 @@ const Navbar = ({ className }: { className?: string }) => {
               <span
                 className={cn(
                   "block max-w-0 group-hover:max-w-24 transition-all duration-300 h-0.5 ",
-                  isScrolledBackground
+                  isScrolledBackground,
+                  categoryLayoutSpanClass
                 )}
               ></span>
             </Link>
@@ -106,12 +119,14 @@ const Navbar = ({ className }: { className?: string }) => {
         ))}
       </li>
 
-      {/* USER SEARCH CART  */}
+      {/* USER - SEARCH - CART  */}
       <li className="flex gap-4">
         <Link href="/login">
           <User className="w-5 h-5 md:w-6 md:h-6 hidden sm:block transition-all duration-300 hover:scale-110" />
         </Link>
-        <Search className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 hover:scale-110" />
+        <Link href="/">
+          <Search className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 hover:scale-110" />
+        </Link>
         <Link href="/cart">
           <ShoppingCart className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 hover:scale-110" />
         </Link>
@@ -129,9 +144,9 @@ const Navbar = ({ className }: { className?: string }) => {
         )}
       >
         <button onClick={toggleMenu}>
-          <X className="w-6 h-6 absolute top-5 left-5 md:left-20 mt-2 transition-all duration-300" />
+          <X className="w-5 h-5 md:w-6 md:h-6 absolute top-5 left-5 md:left-20 transition-all duration-300" />
         </button>
-        <div className="absolute flex flex-col top-28 left-5 md:left-20 gap-5 text-xl">
+        <div className="absolute flex flex-col top-28 left-10 gap-8 text-xl">
           {navMenuList.map((_items, index) => (
             <div key={index}>
               <button className="p-0 m-0 text-start" onClick={toggleMenu}>
@@ -148,13 +163,22 @@ const Navbar = ({ className }: { className?: string }) => {
                   <span
                     className={cn(
                       "block max-w-0 group-hover:max-w-24 transition-all duration-300 h-0.5 ",
-                      isScrolledBackground
+                      sidebarNavTextUnderline,
+                      categoryLayoutSpanClass
                     )}
                   ></span>
                 </Link>
               </button>
             </div>
           ))}
+
+          <Link
+            href="/login"
+            className="flex gap-2 justify-center items-center group hover:font-semibold"
+          >
+            <User className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 group-hover:scale-110" />
+            Account
+          </Link>
         </div>
       </motion.div>
     </ul>

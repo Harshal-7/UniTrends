@@ -7,7 +7,10 @@ export default function categoryLayout({
 }) {
   return (
     <>
-      <Navbar className="text-black transition-none" />
+      <Navbar
+        className="text-black transition-none"
+        categoryLayoutSpanClass="bg-[#000000]"
+      />
       {children}
     </>
   );
