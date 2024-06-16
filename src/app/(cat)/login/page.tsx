@@ -14,7 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Loader2 } from "lucide-react";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
@@ -25,11 +25,11 @@ import { login } from "@/actions/login";
 
 const LoginPage = () => {
   const [loading, setLoading] = useState(false);
-  const searchParams = useSearchParams();
-  var urlError =
-    searchParams.get("error") === "OAuthAccountNotLinked"
-      ? "Email already in use with different provider!"
-      : "";
+  // const searchParams = useSearchParams();
+  // var urlError =
+  //   searchParams.get("error") === "OAuthAccountNotLinked"
+  //     ? "Email already in use with different provider!"
+  //     : "";
 
   const { toast } = useToast();
 
