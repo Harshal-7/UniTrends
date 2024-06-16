@@ -6,11 +6,18 @@
 export const publicRoutes: string[] = ["/"];
 
 /**
+ * An array of routes that are private.
+ * These routes require authentication.
+ * @type {string[]}
+ */
+export const privateRoutes: string[] = ["/cart", "/dashboard"];
+
+/**
  * An array of routes that are used for authentication.
  * These routes will redirect logged in users to settings.
  * @type {string[]}
  */
-export const authRoutes: string[] = ["/login", "/register", "/error"];
+export const authRoutes: string[] = ["/login", "/register"];
 
 /**
  * The prefix for api authentication routes.

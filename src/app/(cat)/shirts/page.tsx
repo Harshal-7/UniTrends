@@ -1,5 +1,7 @@
 "use client";
 
+import FeaturedBtn from "@/components/FeaturedBtn";
+import Filter from "@/components/Filter";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import React from "react";
@@ -11,17 +13,8 @@ const Shirts = () => {
       <div className="flex flex-col mx-auto items-center w-full">
         {/* filter and sort  */}
         <div className="flex gap-4 mt-20 w-[320px] md:w-full mb-10 justify-end">
-          <Button
-            variant="secondary"
-            className="hidden md:flex border items-center justify-center"
-          >
-            Featured
-            <FaAngleDown className="ml-2" />
-          </Button>
-          <Button className="">
-            <FaFilter className="w-3 h-3 mr-2" />
-            Filter
-          </Button>
+          <FeaturedBtn />
+          <Filter />
         </div>
 
         {/* Products  */}

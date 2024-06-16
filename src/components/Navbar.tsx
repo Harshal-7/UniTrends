@@ -85,7 +85,7 @@ const Navbar = ({
   return (
     <ul
       className={cn(
-        "w-full flex justify-between items-center p-5 lg:px-20 sticky top-0 z-[9999] overflow-x-hidden",
+        "w-full flex justify-between items-center p-5 lg:px-20 sticky top-0 z-40 overflow-x-hidden",
         isScrolled,
         className
       )}
@@ -138,27 +138,9 @@ const Navbar = ({
 
       {/* USER - SEARCH - CART  */}
       <li className="flex gap-4">
-        <Popover>
-          <PopoverTrigger asChild>
-            <User className="w-5 h-5 md:w-6 md:h-6 hidden sm:block transition-all duration-300 hover:scale-110" />
-          </PopoverTrigger>
-          <PopoverContent className="flex flex-col w-28 gap-2">
-            <Link href="/login">
-              <Button variant="link">Login</Button>
-            </Link>
-            <hr />
-            <Link href="/register">
-              <Button variant="link">Register</Button>
-            </Link>
-            <hr />
-
-            <Link href="/">
-              <Button onClick={logOut} variant="link">
-                Logout
-              </Button>
-            </Link>
-          </PopoverContent>
-        </Popover>
+        <Link href="/dashboard">
+          <User className="w-5 h-5 md:w-6 md:h-6 hidden sm:block transition-all duration-300 hover:scale-110" />
+        </Link>
 
         <Link href="/">
           <Search className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 hover:scale-110" />
