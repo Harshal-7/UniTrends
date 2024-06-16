@@ -23,7 +23,7 @@ export default function Home() {
           />
           <div
             className={cn(
-              "text-white text-4xl md:text-7xl z-40 absolute bottom-5 md:bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:left-20  md:-translate-x-0 tracking-widest",
+              "text-white text-4xl md:text-7xl z-40 absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:left-20  md:-translate-x-0 tracking-widest",
               BrandFont.className
             )}
           >

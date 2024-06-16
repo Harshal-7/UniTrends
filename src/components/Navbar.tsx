@@ -20,6 +20,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 import { navMenuList } from "@/info/navMenuList";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { get } from "http";
+import { logout } from "@/actions/logout";
+
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const sidebarVariants = {
   open: { x: 0 },
@@ -63,6 +76,10 @@ const Navbar = ({
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
+  };
+
+  const logOut = async () => {
+    logout();
   };
 
   return (
@@ -121,9 +138,28 @@ const Navbar = ({
 
       {/* USER - SEARCH - CART  */}
       <li className="flex gap-4">
-        <Link href="/login">
-          <User className="w-5 h-5 md:w-6 md:h-6 hidden sm:block transition-all duration-300 hover:scale-110" />
-        </Link>
+        <Popover>
+          <PopoverTrigger asChild>
+            <User className="w-5 h-5 md:w-6 md:h-6 hidden sm:block transition-all duration-300 hover:scale-110" />
+          </PopoverTrigger>
+          <PopoverContent className="flex flex-col w-28 gap-2">
+            <Link href="/login">
+              <Button variant="link">Login</Button>
+            </Link>
+            <hr />
+            <Link href="/register">
+              <Button variant="link">Register</Button>
+            </Link>
+            <hr />
+
+            <Link href="/">
+              <Button onClick={logOut} variant="link">
+                Logout
+              </Button>
+            </Link>
+          </PopoverContent>
+        </Popover>
+
         <Link href="/">
           <Search className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 hover:scale-110" />
         </Link>
