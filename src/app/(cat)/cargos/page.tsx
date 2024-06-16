@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import { FaAngleDown, FaFilter } from "react-icons/fa";
 
-const Tshirts = () => {
+const Joggers = () => {
   return (
     <MaxWidthWrapper>
       <div className="flex flex-col mx-auto items-center w-full">
@@ -72,4 +72,4 @@ const Tshirts = () => {
   );
 };
 
-export default Tshirts;
+export default Joggers;
