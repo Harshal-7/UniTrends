@@ -11,7 +11,9 @@ const Dashboard = async () => {
     <MaxWidthWrapper className="flex flex-col gap-20 w-full items-center justify-center mt-16">
       <div className="text-4xl font-semibold">Dashboard</div>
 
-      <p>{JSON.stringify(session)}</p>
+      <p className="break-all text-xs md:text-base px-4">
+        {JSON.stringify(session)}
+      </p>
 
       <form
         action={async () => {

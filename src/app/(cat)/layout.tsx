@@ -9,7 +9,7 @@ export default function categoryLayout({
     <>
       <Navbar
         className="text-black transition-none"
-        categoryLayoutSpanClass="bg-[#000000]"
+        categoryLayoutSpanClass="bg-[#000000] text-sm"
       />
       {children}
     </>

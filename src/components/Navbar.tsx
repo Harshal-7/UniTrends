@@ -65,7 +65,7 @@ const Navbar = ({
 
   const isScrolled =
     scrollPosition > 0
-      ? "shadow transition-all duration-300 bg-background"
+      ? "shadow bg-background transition-all duration-300"
       : "text-white transition-all duration-300";
 
   const sidebarNavTextUnderline =
@@ -73,6 +73,11 @@ const Navbar = ({
 
   const isScrolledBackground =
     scrollPosition > 0 ? "bg-[#000000] text-white" : "bg-[#ffffff] text-black";
+
+  const ifScrollInCategories =
+    scrollPosition > 0
+      ? "text-sm transition-all duration-300"
+      : "text-base transition-all duration-300";
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -85,7 +90,7 @@ const Navbar = ({
   return (
     <ul
       className={cn(
-        "w-full flex justify-between items-center p-5 lg:px-20 sticky top-0 z-40 overflow-x-hidden",
+        "w-full flex justify-between items-center p-6 lg:px-20 sticky top-0 z-40 overflow-x-hidden",
         isScrolled,
         className
       )}
@@ -117,6 +122,7 @@ const Navbar = ({
             <Link
               className={cn(
                 "group hover:font-semibold transition-all duration-300 py-2",
+                ifScrollInCategories,
                 pathname === _items.navHref
                   ? "font-semibold transition-all duration-300"
                   : ""
@@ -127,8 +133,7 @@ const Navbar = ({
               <span
                 className={cn(
                   "block max-w-0 group-hover:max-w-24 transition-all duration-300 h-0.5 ",
-                  isScrolledBackground,
-                  categoryLayoutSpanClass
+                  isScrolledBackground
                 )}
               ></span>
             </Link>
