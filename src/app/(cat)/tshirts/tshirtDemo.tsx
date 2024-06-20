@@ -19,7 +19,7 @@ const TshirtDemo = () => {
         </div>
 
         {/* Products  */}
-        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-row-dense gap-x-5 gap-y-10 md:gap-10 my-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-row-dense gap-x-5 gap-y-10 md:gap-10 mt-5 mb-10">
           <div className="flex flex-col">
             <div className="w-[160px] md:w-[250px] h-[220px] md:h-[300px] bg-gray-300 felx items-center justify-center relative"></div>
             <div className="tracking-wider mt-4 mb-1">Symposium Tee</div>

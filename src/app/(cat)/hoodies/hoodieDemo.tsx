@@ -18,11 +18,11 @@ const HoodieDemo = () => {
     <MaxWidthWrapper className="mb-10">
       <div className="flex flex-col mx-auto items-center w-full">
         {/* Title */}
-        <div className="text-center w-full p-4 text-xl md:text-3xl font-bold ">
+        <div className="text-center w-full p-4 text-2xl md:text-3xl font-bold ">
           Hoodies
         </div>
         {/* Products  */}
-        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-row-dense gap-x-5 gap-y-10 md:gap-10 my-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-row-dense gap-x-5 gap-y-10 md:gap-10 mt-5 mb-10">
           {TopwareProductsForHomePage.map((product, index) => (
             <Link
               href={product.href}

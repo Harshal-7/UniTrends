@@ -169,6 +169,8 @@ const Navbar = ({
         <button onClick={toggleMenu}>
           <X className="w-5 h-5 md:w-6 md:h-6 absolute top-5 left-5 md:left-20 transition-all duration-300" />
         </button>
+        <Logo className="absolute top-10 left-1/2 -translate-x-1/2 text-xl md:text-2xl transition-all duration-300" />
+
         <div className="absolute flex flex-col top-28 left-10 gap-8 text-xl">
           {navMenuList.map((_items, index) => (
             <div key={index}>
@@ -196,7 +198,8 @@ const Navbar = ({
           ))}
 
           <Link
-            href="/login"
+            href="/dashboard"
+            onClick={toggleMenu}
             className="flex gap-2 justify-center items-center group hover:font-semibold"
           >
             <User className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 group-hover:scale-110" />
