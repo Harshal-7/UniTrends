@@ -13,7 +13,7 @@ const Shirts = () => {
       <div className="flex flex-col mx-auto items-center w-full">
         {/* filter and sort  */}
         <div className="flex gap-4 mt-20 w-[320px] md:w-full mb-10 justify-end">
-          <FeaturedBtn />
+          {/* <FeaturedBtn /> */}
           <Filter />
         </div>
 
