@@ -23,10 +23,12 @@ export default function ProductDetailsPage({
     <div className="min-h-screen max-w-7xl m-auto p-6 flex flex-col items-center gap-10 md:gap-14 relatives">
       <div className="text-4xl ">{myProduct.ProductName}</div>
 
-      <img
+      <Image
         src={myProduct.src}
         alt="hoodie.jpg"
-        className=" bg-gray-300 felx items-center justify-center object-cover"
+        width={200}
+        height={200}
+        className="w-full h-full bg-gray-300 felx items-center justify-center object-cover"
       />
     </div>
   );

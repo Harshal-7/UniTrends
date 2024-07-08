@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
-export default function categoryLayout({
+export default function CategoryLayout({
   children,
 }: {
   children: React.ReactNode;

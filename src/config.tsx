@@ -6,22 +6,22 @@ export const CONFIG = {
     {
       name: "T-shirts",
       href: "/tshirts",
-      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/cehaznzfiiw4fywwzfct.jpg",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/blx6tlvw1nshjkjhnkan.jpg",
     },
     {
       name: "Shirts",
       href: "/shirts",
-      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/cehaznzfiiw4fywwzfct.jpg",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/mfm5aabeud2piv67wmht.jpg",
     },
     {
       name: "Hoodies",
       href: "/hoodies",
-      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/cehaznzfiiw4fywwzfct.jpg",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/bwwgiffd5thxdsu8hoyn.jpg",
     },
     {
       name: "Tops",
       href: "/tops",
-      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/cehaznzfiiw4fywwzfct.jpg",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/yfhnvorfhh1vhgjwgza4.jpg",
     },
     {
       name: "Jackets",
@@ -31,17 +31,17 @@ export const CONFIG = {
     {
       name: "Cargoes",
       href: "/cargoes",
-      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/cehaznzfiiw4fywwzfct.jpg",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/bottomware/hib5elw0md4chxolrzw3.jpg",
     },
     {
       name: "Joggers",
       href: "/joggers",
-      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/cehaznzfiiw4fywwzfct.jpg",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1720461880/bottomware/yf8juwmnkbipcyw2qye3.jpg",
     },
     {
       name: "Shorts",
       href: "/shorts",
-      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/cehaznzfiiw4fywwzfct.jpg",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/bottomware/fhowhwhurzctsp5eyuah.jpg",
     },
   ],
   Hoodies: [

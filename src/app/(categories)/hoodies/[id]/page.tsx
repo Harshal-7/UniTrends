@@ -20,11 +20,14 @@ export default function ProductDetailsPage({
     <div className="min-h-screen max-w-7xl m-auto p-6 flex flex-col items-center gap-10 md:gap-14 relatives">
       <div className="text-4xl ">{myProduct.ProductName}</div>
 
-      <img
-        src={myProduct.src}
-        alt="hoodie.jpg"
-        className=" bg-gray-300 felx items-center justify-center object-cover"
-      />
+      <div className="w-[600px] h-[600px] relative">
+        <Image
+          src={myProduct.src}
+          alt="hoodie.jpg"
+          fill
+          className="object-cover absolute top-0 left-0"
+        />
+      </div>
     </div>
   );
 }

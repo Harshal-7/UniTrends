@@ -23,9 +23,18 @@ const Collections = () => {
         {/* Products  */}
         <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-row-dense gap-x-5 gap-y-10 md:gap-10 my-10 ">
           {CONFIG.ProductCollection.map((product, index) => (
-            <Link href={product.href} className="flex flex-col group">
+            <Link
+              key={index}
+              href={product.href}
+              className="flex flex-col group"
+            >
               <div className="w-[160px] md:w-[250px] h-[220px] md:h-[300px] bg-gray-300 felx items-center justify-center relative">
-                <Image src={product.src} fill alt="img" />
+                <Image
+                  src={product.src}
+                  fill
+                  alt="img"
+                  className="object-cover"
+                />
               </div>
               <div className="tracking-wider mt-4 mb-1 flex gap-2 items-center ">
                 {product.name}

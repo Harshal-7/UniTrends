@@ -3,9 +3,9 @@ import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Pacifico } from "next/font/google";
-import TshirtDemo from "@/app/(categories)/tshirts/tshirtDemo";
-import HoodieDemo from "@/app/(categories)/hoodies/hoodieDemo";
-import Collections from "@/components/Collections";
+import TshirtDemo from "./(home-demo-components)/tshirtDemo";
+import HoodieDemo from "./(home-demo-components)/hoodieDemo";
+import Collections from "./(home-demo-components)/Collections";
 const BrandFont = Pacifico({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
@@ -15,15 +15,17 @@ export default function Home() {
       {/* Banner */}
       <div className="absolute top-0 left-0 w-full h-screen">
         <div className="absolute inset-0">
-          <img
-            src="banner6.jpg"
+          <Image
+            src="/banner6.jpg"
             alt="banner"
-            className="hidden md:block h-full w-full object-cover"
+            fill
+            className="hidden md:block object-cover"
           />
-          <img
-            src="banner1.jpg"
+          <Image
+            src="/banner1.jpg"
             alt="banner"
-            className="block md:hidden h-full w-full object-cover"
+            fill
+            className="block md:hidden object-cover"
           />
           <div
             className={cn(
