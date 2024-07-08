@@ -3,9 +3,8 @@ import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Pacifico } from "next/font/google";
-import Tshirts from "./(cat)/tshirts/page";
-import TshirtDemo from "./(cat)/tshirts/tshirtDemo";
-import HoodieDemo from "./(cat)/hoodies/hoodieDemo";
+import TshirtDemo from "@/app/(categories)/tshirts/tshirtDemo";
+import HoodieDemo from "@/app/(categories)/hoodies/hoodieDemo";
 import Collections from "@/components/Collections";
 const BrandFont = Pacifico({ subsets: ["latin"], weight: ["400"] });
 

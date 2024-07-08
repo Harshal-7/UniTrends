@@ -167,7 +167,7 @@ const Navbar = ({
         )}
       >
         <button onClick={toggleMenu}>
-          <X className="w-5 h-5 md:w-6 md:h-6 absolute top-5 left-5 md:left-20 transition-all duration-300" />
+          <X className="w-5 h-5 md:w-6 md:h-6 absolute top-7 left-6 md:left-20 transition-all duration-300" />
         </button>
         <Logo className="absolute top-10 left-1/2 -translate-x-1/2 text-xl md:text-2xl transition-all duration-300" />
 
@@ -177,9 +177,9 @@ const Navbar = ({
               <button className="p-0 m-0 text-start" onClick={toggleMenu}>
                 <Link
                   className={cn(
-                    "group hover:font-semibold transition-all duration-500 py-2",
+                    "group hover:font-semibold transition-all duration-300 py-2",
                     pathname === _items.navHref
-                      ? "font-semibold transition-all duration-500"
+                      ? "font-semibold transition-all duration-300"
                       : ""
                   )}
                   href={_items.navHref}

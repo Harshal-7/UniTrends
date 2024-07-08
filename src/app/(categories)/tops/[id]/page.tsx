@@ -4,6 +4,7 @@ import {
   TopwareProducts,
   TopwareProductsForHomePage,
 } from "@/components/products/topware";
+import Image from "next/image";
 
 export default function ProductDetailsPage({
   params,
@@ -19,11 +20,14 @@ export default function ProductDetailsPage({
   }
 
   return (
-    <div className="min-h-screen max-w-7xl m-auto p-6 flex flex-col items-center gap-10 md:gap-14">
-      <div className="grid grid-rows-1 lg:grid-cols-3 gap-10 text-4xl">
-        {myProduct.ProductName}
-      </div>
-      <img src={myProduct.src} alt="img" />
+    <div className="min-h-screen max-w-7xl m-auto p-6 flex flex-col items-center gap-10 md:gap-14 relatives">
+      <div className="text-4xl ">{myProduct.ProductName}</div>
+
+      <img
+        src={myProduct.src}
+        alt="hoodie.jpg"
+        className=" bg-gray-300 felx items-center justify-center object-cover"
+      />
     </div>
   );
 }

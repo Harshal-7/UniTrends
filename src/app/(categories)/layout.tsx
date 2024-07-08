@@ -1,10 +1,18 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 export default function categoryLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, [pathname]);
   return (
     <>
       <Navbar

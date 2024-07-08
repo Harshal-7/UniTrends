@@ -15,11 +15,15 @@ import {
 import { SelectIcon } from "@radix-ui/react-select";
 import { ArrowRight, ChevronDownIcon } from "lucide-react";
 
-const FeaturedBtn = () => {
+const FeaturedBtn = ({ setSortCriteria }: { setSortCriteria: any }) => {
+  const handleChange = (value: any) => {
+    setSortCriteria(value);
+  };
+
   return (
-    <Select>
+    <Select onValueChange={handleChange}>
       <SelectTrigger className="px-4 flex justify-center items-center border rounded-sm text-sm font-medium">
-        <SelectValue placeholder="Featured" />
+        <SelectValue placeholder="Sort" />
         <SelectIcon className="SelectIcon">
           <ChevronDownIcon className="w-4 h-4 ml-2" />
         </SelectIcon>
