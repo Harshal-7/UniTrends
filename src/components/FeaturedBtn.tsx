@@ -28,7 +28,7 @@ const FeaturedBtn = ({ setSortCriteria }: { setSortCriteria: any }) => {
           <ChevronDownIcon className="w-4 h-4 ml-2" />
         </SelectIcon>
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="z-[99999]">
         <SelectGroup>
           <SelectItem value="best selling">Best Selling</SelectItem>
           <SelectItem value="Title: A-Z">Title: A-Z</SelectItem>

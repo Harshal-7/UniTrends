@@ -37,7 +37,7 @@ export function SearchButton() {
       <SheetTrigger asChild>
         <Search className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 hover:scale-110" />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="z-[99999]">
         <SheetHeader>
           {/* <SheetTitle>Edit profile</SheetTitle>
         <SheetDescription>
