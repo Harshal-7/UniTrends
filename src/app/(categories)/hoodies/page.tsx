@@ -3,6 +3,7 @@
 import FeaturedBtn from "@/components/FeaturedBtn";
 import Filter from "@/components/Filter";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import Product from "@/components/Product";
 import { TopwareProducts } from "@/components/products/topware";
 import { Button } from "@/components/ui/button";
 import { CONFIG } from "@/config";
@@ -47,19 +48,13 @@ const Hoodies = () => {
             <Link
               href={product.href}
               key={index}
-              className="flex flex-col group "
+              className="flex flex-col group"
             >
-              <Image
-                src={product.src}
-                alt="hoodie.jpg"
-                width={250}
-                height={300}
-                className="w-[160px] md:w-[250px] h-[220px] md:h-[300px] bg-gray-300 felx items-center justify-center relative object-cover"
-              />
+              <Product mySrc={product.src} />
 
               <div className="tracking-wider mt-4 mb-1 flex gap-2 items-center">
                 <span>{product.ProductName}</span>
-                <ArrowRight className="h-5 w-5 opacity-0 group-hover:opacity-100" />
+                <ArrowRight className="h-5 w-5 transition-transform duration-500 scale-0 group-hover:scale-100" />{" "}
               </div>
               <div className="text-xs tracking-widest">
                 Rs. {product.ProductPrice}

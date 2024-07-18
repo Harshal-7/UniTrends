@@ -3,9 +3,9 @@ import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Pacifico } from "next/font/google";
-import TshirtDemo from "./(home-demo-components)/tshirtDemo";
 import HoodieDemo from "./(home-demo-components)/hoodieDemo";
 import Collections from "./(home-demo-components)/Collections";
+import ShirtDemo from "./(home-demo-components)/shirtDemo";
 const BrandFont = Pacifico({ subsets: ["latin"], weight: ["400"] });
 
 export default function Home() {
@@ -40,7 +40,7 @@ export default function Home() {
       <div className="h-screen"></div>
       {/* Sections */}
       <div className="relative z-10 flex flex-col">
-        <TshirtDemo />
+        <ShirtDemo />
         <HoodieDemo />
         <Collections />
       </div>

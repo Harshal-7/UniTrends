@@ -15,24 +15,13 @@ import { cn } from "@/lib/utils";
 import Logo from "@/components/Logo";
 import useScroll from "@/hooks/useScroll";
 import { motion } from "framer-motion";
-import { ScrollArea } from "./ui/scroll-area";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Button } from "./ui/button";
-import { navMenuList } from "@/info/navMenuList";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import { get } from "http";
-import { logout } from "@/actions/logout";
 
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { navMenuList } from "@/info/navMenuList";
+
+import { logout } from "@/actions/logout";
+import { SearchButton } from "./SearchButton";
 
 const sidebarVariants = {
   open: { x: 0 },
@@ -49,6 +38,7 @@ const Navbar = ({
   const scrollPosition = useScroll();
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchActive, setSearchActive] = useState(false);
 
   // for sidebar menu overflow (can not scroll if menu is open)
   useEffect(() => {
@@ -90,7 +80,7 @@ const Navbar = ({
   return (
     <ul
       className={cn(
-        "w-full flex justify-between items-center p-6 lg:px-20 sticky top-0 z-40 overflow-x-hidden",
+        "w-full flex justify-between items-center p-6 lg:px-20 sticky top-0 z-[999] overflow-x-hidden",
         isScrolled,
         className
       )}
@@ -143,13 +133,16 @@ const Navbar = ({
 
       {/* USER - SEARCH - CART  */}
       <li className="flex gap-4">
+        {/* <button onClick={() => setSearchActive((prev) => !prev)} className="">
+          <Search className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 hover:scale-110" />
+        </button> */}
+
+        <SearchButton />
+
         <Link href="/dashboard">
           <User className="w-5 h-5 md:w-6 md:h-6 hidden sm:block transition-all duration-300 hover:scale-110" />
         </Link>
 
-        <Link href="/">
-          <Search className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 hover:scale-110" />
-        </Link>
         <Link href="/cart">
           <ShoppingCart className="w-5 h-5 md:w-6 md:h-6 transition-all duration-300 hover:scale-110" />
         </Link>
@@ -207,6 +200,8 @@ const Navbar = ({
           </Link>
         </div>
       </motion.div>
+
+      {/* Search Bar  */}
     </ul>
   );
 };

@@ -76,36 +76,78 @@ export const CONFIG = {
       price: 2999,
     },
   ],
-  Tshirts: [
+  Shirts: [
     {
       ProductName: "Offwhite Shirt",
-      ProductPrice: "6,499.00",
-      href: "/tshirts/offwhiteShirt",
+      ProductPrice: "3,499.00",
+      href: "/shirts/offwhiteShirt",
       src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/mfm5aabeud2piv67wmht.jpg",
-      price: 6499,
+      price: 3499,
     },
 
     {
       ProductName: "Blue Shirt",
-      ProductPrice: "4,999",
-      href: "/tshirts/blueShirt",
+      ProductPrice: "1,499",
+      href: "/shirts/blueShirt",
       src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/ur5m8gyivky1sjw4o1ot.jpg",
-      price: 4999,
+      price: 1499,
     },
 
     {
-      ProductName: "Basic Shirt",
+      ProductName: "Classic White",
       ProductPrice: "2,499.00",
-      href: "/tshirts/basicShirt",
+      href: "/shirts/classicWhite",
       src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/afg7gq2le34ajpinuwtp.jpg",
       price: 2499,
     },
     {
       ProductName: "White Shirt",
       ProductPrice: "2,999.00",
-      href: "/tshirts/whiteShirt",
+      href: "/shirts/whiteShirt",
       src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/yptqxlit7ddpowvddql3.jpg",
       price: 2999,
+    },
+  ],
+
+  Tshirts: [
+    {
+      ProductName: "Clover T-Shirt",
+      ProductPrice: "1,499.00",
+      href: "/tshirts/cloverTshirt",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718987037/topware/blx6tlvw1nshjkjhnkan.jpg",
+      price: 1499,
+    },
+
+    {
+      ProductName: "Classic 705",
+      ProductPrice: "999",
+      href: "/tshirts/classic705",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/h7ltbt3tbf6yo3pwapdx.jpg",
+      price: 999,
+    },
+
+    {
+      ProductName: "White Oversized",
+      ProductPrice: "1,299.00",
+      href: "/tshirts/whiteOversized",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/eqlxspig1nmqm2by0zz5.jpg",
+      price: 1299,
+    },
+
+    {
+      ProductName: "Yahweh T-Shirt",
+      ProductPrice: "1,299.00",
+      href: "/tshirts/yehwehTshirt",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/s137j6iypkvqhmtechei.jpg",
+      price: 1299,
+    },
+
+    {
+      ProductName: "White T-Shirt",
+      ProductPrice: "999.00",
+      href: "/tshirts/whiteShirt",
+      src: "https://res.cloudinary.com/dmgfb0srg/image/upload/v1718986985/topware/ejra97980jihdwpnd9fr.jpg",
+      price: 999,
     },
   ],
 };

@@ -3,6 +3,7 @@
 import FeaturedBtn from "@/components/FeaturedBtn";
 import Filter from "@/components/Filter";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import Product from "@/components/Product";
 import { Button } from "@/components/ui/button";
 import { CONFIG } from "@/config";
 import { ArrowRight } from "lucide-react";
@@ -28,17 +29,11 @@ const Collections = () => {
               href={product.href}
               className="flex flex-col group"
             >
-              <div className="w-[160px] md:w-[250px] h-[220px] md:h-[300px] bg-gray-300 felx items-center justify-center relative">
-                <Image
-                  src={product.src}
-                  fill
-                  alt="img"
-                  className="object-cover"
-                />
-              </div>
+              <Product mySrc={product.src} />
+
               <div className="tracking-wider mt-4 mb-1 flex gap-2 items-center ">
                 {product.name}
-                <ArrowRight className="w-4 h-4 group-hover:w-5 group-hover:h-5 transition-all duration-300" />{" "}
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:scale-125" />
               </div>
             </Link>
           ))}

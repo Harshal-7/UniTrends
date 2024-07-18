@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { CONFIG } from "@/config";
+import Product from "@/components/Product";
 
 const HoodieDemo = () => {
   return (
@@ -24,16 +25,11 @@ const HoodieDemo = () => {
               key={index}
               className="flex flex-col group"
             >
-              <Image
-                src={product.src}
-                alt="hoodie.jpg"
-                width={250}
-                height={300}
-                className="w-[160px] md:w-[250px] h-[220px] md:h-[300px] bg-gray-300 felx items-center justify-center relative object-cover"
-              />
+              <Product mySrc={product.src} />
 
-              <div className="tracking-wider mt-4 mb-1 flex gap-2 items-center">
+              <div className="tracking-wider mt-4 mb-1 flex gap-2 items-center group">
                 <span>{product.ProductName}</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 scale-0 group-hover:scale-100" />
               </div>
               <div className="text-xs tracking-widest">
                 Rs. {product.ProductPrice}

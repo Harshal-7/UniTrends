@@ -22,7 +22,7 @@ const FeaturedBtn = ({ setSortCriteria }: { setSortCriteria: any }) => {
 
   return (
     <Select onValueChange={handleChange}>
-      <SelectTrigger className="px-4 flex justify-center items-center border rounded-sm text-sm font-medium">
+      <SelectTrigger className="px-4 flex justify-center items-center border rounded-sm text-sm font-medium w-42">
         <SelectValue placeholder="Sort" />
         <SelectIcon className="SelectIcon">
           <ChevronDownIcon className="w-4 h-4 ml-2" />
