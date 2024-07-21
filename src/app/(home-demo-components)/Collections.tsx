@@ -17,12 +17,12 @@ const Collections = () => {
     <MaxWidthWrapper className="mb-10">
       <div className="flex flex-col mx-auto items-center w-full">
         {/* Title */}
-        <div className="text-center w-full p-4 text-xl md:text-3xl font-bold ">
+        <div className="text-center w-full p-4 text-3xl md:text-3xl font-bold ">
           Collections
         </div>
 
         {/* Products  */}
-        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-row-dense gap-x-5 gap-y-10 md:gap-10 my-10 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-row-dense gap-5 md:gap-10 my-10 ">
           {CONFIG.ProductCollection.map((product, index) => (
             <Link
               key={index}

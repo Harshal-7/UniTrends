@@ -16,7 +16,7 @@ const Product = ({
   return (
     <div
       className={cn(
-        "relative w-[160px] md:w-[250px] h-[220px] md:h-[300px] overflow-hidden group",
+        "relative w-[160px] md:w-[250px] h-[220px] md:h-[300px] overflow-hidden group rounded-md",
         divClassName
       )}
     >

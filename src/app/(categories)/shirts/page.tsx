@@ -36,12 +36,12 @@ const Shirts = () => {
     <MaxWidthWrapper className="mb-10">
       <div className="flex flex-col mx-auto items-center w-full">
         {/* Title */}
-        <div className="text-center w-full p-4 text-xl md:text-3xl font-bold">
+        <div className="text-center w-full p-4 text-3xl md:text-3xl font-bold">
           Shirts
         </div>
 
         {/* filter and sort  */}
-        <div className="flex gap-4 mt-10 w-[320px] md:w-full mb-10 justify-end">
+        <div className="flex gap-4 my-5 w-[320px] md:w-full justify-between">
           <FeaturedBtn setSortCriteria={setSortCriteria} />
           <Filter />
         </div>
@@ -52,7 +52,7 @@ const Shirts = () => {
             <Link
               href={product.href}
               key={index}
-              className="flex flex-col group "
+              className="flex flex-col group"
             >
               <Product mySrc={product.src} />
 

@@ -47,9 +47,9 @@ export function SearchButton() {
         <div className="flex flex-col gap-10 mt-14">
           <hr />
           <div className="text-2xl">Search Product</div>
-          <div className="flex justify-between">
+          <div className="flex gap-4 md:gap-8">
             <Input
-              className="w-[220px] h-[50px] text-xl"
+              className="md:w-[220px] md:h-[50px] w-[170px] h-[40px] text-xl"
               onChange={(e) => setProductName(e.target.value)}
               value={productName}
             />
@@ -57,7 +57,7 @@ export function SearchButton() {
             <SheetClose asChild>
               <button
                 onClick={searchBtn}
-                className="mr-5 bg-black text-white px-4"
+                className="md:mr-5 bg-black text-white px-5 md:px-8 rounded-md"
               >
                 GO
               </button>

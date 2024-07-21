@@ -37,7 +37,7 @@ const Filter = () => {
           <FaFilter className="w-3 h-3" />
         </Button>
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent className="z-[999]">
         <SheetHeader>
           {/* <SheetTitle>Edit profile</SheetTitle>
           <SheetDescription>

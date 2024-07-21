@@ -1,0 +1,6 @@
+FeaturedBtn.tsx : solve mobile devices sorting bug
+    
+    - try using shadcn sheets
+    - discord help
+
+State Management : REDUX-TOOLKIT

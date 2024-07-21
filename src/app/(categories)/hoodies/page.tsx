@@ -36,8 +36,13 @@ const Hoodies = () => {
   return (
     <MaxWidthWrapper className="mb-10">
       <div className="flex flex-col mx-auto items-center w-full">
+        {/* Title */}
+        <div className="text-center w-full p-4 text-3xl md:text-3xl font-bold">
+          Hoodies
+        </div>
+
         {/* filter and sort  */}
-        <div className="flex gap-4 mt-20 w-[320px] md:w-full mb-10 justify-end">
+        <div className="flex gap-4 my-5 w-[320px] md:w-full justify-between md:justify-end md:mb-10">
           <FeaturedBtn setSortCriteria={setSortCriteria} />
           <Filter />
         </div>

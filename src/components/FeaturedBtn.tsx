@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { Button } from "./ui/button";
-import { FaAngleDown } from "react-icons/fa";
 import {
   Select,
   SelectContent,
@@ -13,7 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { SelectIcon } from "@radix-ui/react-select";
-import { ArrowRight, ChevronDownIcon } from "lucide-react";
+import { ChevronDownIcon } from "lucide-react";
 
 const FeaturedBtn = ({ setSortCriteria }: { setSortCriteria: any }) => {
   const handleChange = (value: any) => {

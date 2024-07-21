@@ -14,7 +14,7 @@ const HoodieDemo = () => {
     <MaxWidthWrapper className="mb-10">
       <div className="flex flex-col mx-auto items-center w-full">
         {/* Title */}
-        <div className="text-center w-full p-4 text-2xl md:text-3xl font-bold ">
+        <div className="text-center w-full p-4 text-3xl md:text-3xl font-bold ">
           Hoodies
         </div>
         {/* Products  */}
@@ -38,7 +38,7 @@ const HoodieDemo = () => {
           ))}
         </div>
         <Link href="/hoodies" className="md:self-start">
-          <Button className="flex gap-2">
+          <Button variant="outline" className="flex gap-2">
             <span>View all</span>
             <ArrowRight className="w-4 h-4" />{" "}
           </Button>
